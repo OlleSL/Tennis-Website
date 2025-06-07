@@ -1,0 +1,143 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Global Styles */
+:root {
+  --light-bg: #f9f9f9;
+  --accent: #444;
+  --hover-accent: #000;
+  --nav-bg: #eaeaea;
+  --text-color: #333;
+  --border-color: #ccc;
+  --card-bg: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+}
+
+/* Recruiting Navigation */
+.recruiting-nav {
+  background-color: var(--nav-bg);
+  padding: 15px 0;
+  border-bottom: 2px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+}
+
+.recruiting-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.recruiting-nav li a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.recruiting-nav li a:hover {
+  color: var(--hover-accent);
+}
+
+/* Page Content Section */
+.page-content {
+  max-width: 1100px;
+  margin: 80px auto 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.page-content p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Info Card Grid - Now 2 Cards */
+.info-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  padding: 20px;
+  border-radius: 20px;
+  width: 360px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+  text-align: left;
+  color: white; /* Default white text for dark backgrounds */
+}
+
+/* Custom Backgrounds */
+.info-card.pink {
+  background-color: #666666; /* soft pink */
+  border: 3px solid black;
+
+}
+
+.info-card.navy {
+  background-color: rgb(0, 0, 0); /* navy blue */
+  /* border-color: gold; */
+  border: 3px solid gold;
+}
+
+/* Typography Inside Cards */
+.info-card h3 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 20px;
+  /* color: var(--accent); */
+}
+
+.info-card p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.info-card ul {
+  padding-left: 20px; /* indent from the card edge */
+  margin: 0;
+  list-style-type: disc;
+}
+
+.info-card li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #fff; /* white text for navy / adjust as needed */
+}
+
+/* Responsive Layout */
+@media (max-width: 700px) {
+  .info-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    width: 90%;
+  }
+}
